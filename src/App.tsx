@@ -1,51 +1,50 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
 
 export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
+        <h2>Accounts</h2>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        <ul>
+          <li>
+            <Link to="/netflix">Netflix</Link>
+          </li>
+          <li>
+            <Link to="/zillow-group">Zillow Group</Link>
+          </li>
+          <li>
+            <Link to="/yahoo">Yahoo</Link>
+          </li>
+          <li>
+            <Link to="/modus-create">Modus Create</Link>
+          </li>
+        </ul>
+
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/:id" children={<Child />} />
         </Switch>
       </div>
     </Router>
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
+function Child() {
+  // We can use the `useParams` hook here to access
+  // the dynamic pieces of the URL.
+  let { id } = useParams<{ id: string }>();
+  console.log(id);
+  return (
+    <div>
+      <h3>ID: {id}</h3>
+    </div>
+  );
 }

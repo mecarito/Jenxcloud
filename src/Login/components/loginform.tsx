@@ -67,7 +67,9 @@ export default function Loginform() {
             type="checkbox"
           />
           <p className="ml-2 text-black text-sm">Remember me</p>
-          <p className="ml-20 text-sm text-indigo-900">Forgot password?</p>
+          <p className="ml-20 text-sm text-indigo-900 cursor-pointer">
+            Forgot password?
+          </p>
         </div>
 
         <button
@@ -79,7 +81,9 @@ export default function Loginform() {
         </button>
         <p className="text-sm mt-1 mb-4">
           Not registered yet?
-          <span className="ml-2 text-indigo-900">Create an Account</span>
+          <span className="ml-2 text-indigo-900 cursor-pointer">
+            Create an Account
+          </span>
         </p>
         {/* <p className="text-xs mt-1 mb-1 text-gray-500">
           &#169;2021 Mecar All rights reserved

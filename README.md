@@ -1,4 +1,4 @@
-# Building User interface challenge
+# Challenge to build a user interface
 
 This project is a challenge to build user interfaces from several designes and create a
 sample product

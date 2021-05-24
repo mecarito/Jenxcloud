@@ -7,7 +7,7 @@ export default function Loginpage() {
     <>
       <div className="px-20 py-10 bg-gray-300 ">
         <div className="grid grid-cols-2 bg-white rounded-lg">
-          <div className="px-10">
+          <div className="px-10 ">
             <Loginform />
           </div>
           <div className="py-40 px-20  bg-indigo-600 rounded-r-lg">

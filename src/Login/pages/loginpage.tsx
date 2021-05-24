@@ -10,7 +10,7 @@ export default function Loginpage() {
           <div className="px-10">
             <Loginform />
           </div>
-          <div className="bg-indigo-600 rounded-r-lg">
+          <div className="py-40 px-20  bg-indigo-600 rounded-r-lg">
             <Loginnote />
           </div>
         </div>

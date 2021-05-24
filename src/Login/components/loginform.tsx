@@ -16,7 +16,7 @@ export default function Loginform() {
          ring-1 ring-gray-300 w-80 focus:ring-indigo-500 focus:outline-none mt-6"
         >
           <img src={Googlelogo} alt="google logo" className="w-6 h-6" />
-          <p className="text-black"> Sign in with Google</p>
+          <p className="text-black text-sm"> Sign in with Google</p>
         </button>
         <div className="flex items-center space-x-2 mt-2 mb-1">
           <div className="w-24 h-[1px] bg-gray-300"></div>

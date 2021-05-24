@@ -1,10 +1,12 @@
 import React from "react";
 import Googlelogo from "../../assets/search.svg";
+import Flash from "../../assets/flash.svg";
 
 export default function Loginform() {
   return (
     <>
       <div className="flex flex-col gap-4 pt-8 px-20">
+        <img src={Flash} alt="flash" className="w-8 h-8" />
         <h1 className="text-2xl text-black font-bold"> Login</h1>
         <h6 className="text-gray-600 text-sm">
           See your growth and get consulting support!
@@ -75,7 +77,7 @@ export default function Loginform() {
         >
           <p className="text-white text-sm"> Login </p>
         </button>
-        <p className="text-sm mt-1">
+        <p className="text-sm mt-1 mb-4">
           Not registered yet?
           <span className="ml-2 text-indigo-900">Create an Account</span>
         </p>

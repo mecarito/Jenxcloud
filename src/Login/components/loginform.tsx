@@ -40,7 +40,7 @@ export default function Loginform() {
             autoComplete="email"
             className=" w-70 mt-1 focus:ring-indigo-500 focus:border-indigo-500 
           shadow-sm sm:text-sm border-gray-300 rounded-full
-          placeholder-gray-500 placeholder-opacity-80"
+          placeholder-gray-300"
           />
         </div>
         <div>
@@ -58,7 +58,7 @@ export default function Loginform() {
             autoComplete="password"
             className="w-70 mt-1 focus:ring-indigo-500 focus:border-indigo-500 
            shadow-sm sm:text-sm border-gray-300 rounded-full
-           placeholder-gray-500 placeholder-opacity-80"
+           placeholder-gray-300"
           />
         </div>
         <div className="flex gap-2 items-center">

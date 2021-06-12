@@ -1,8 +1,17 @@
 import React from "react";
 import Googlelogo from "../../assets/search.svg";
 import Flash from "../../assets/flash.svg";
+import firebase from "firebase/app";
+import "firebase/auth";
 
 export default function Loginform() {
+  async function signInWithGoogle() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    await firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => console.log(result.user?.displayName));
+  }
   return (
     <>
       <div className="flex flex-col gap-4 pt-8 px-10 items-center">
@@ -14,6 +23,7 @@ export default function Loginform() {
         <button
           className="flex flex-row rounded-full py-2 justify-center gap-4 items-center
          ring-1 ring-gray-300 w-60 focus:ring-indigo-500 focus:outline-none mt-4"
+          onClick={signInWithGoogle}
         >
           <img src={Googlelogo} alt="google logo" className="w-6 h-6" />
           <p className="text-black text-sm"> Sign in with Google</p>
